@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import HotelSearchPage from './HotelSearchPage';
+import HotelSearchPage from './domains/HotelSearchPage';
 
 const Stack = createStackNavigator();
 

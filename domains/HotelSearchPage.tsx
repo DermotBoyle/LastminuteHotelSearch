@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text, StyleSheet} from 'react-native';
 import HotelList from '../components/HotelList';
 import UtilityToolbar from '../components/UtitlityToolbar';
 import {useQuery} from 'react-query';
@@ -26,11 +26,17 @@ const HotelSearchPage = () => {
   }
 
   return (
-    <View>
+    <SafeAreaView style={styles.pageContainer}>
       <UtilityToolbar />
       <HotelList hotelData={data} />
-    </View>
+    </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  pageContainer: {
+    flex: 1,
+  },
+});
 
 export default HotelSearchPage;

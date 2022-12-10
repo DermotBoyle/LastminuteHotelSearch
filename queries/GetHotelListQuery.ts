@@ -1,3 +1,5 @@
+import {Currency} from '../components/HotelCard';
+
 export type HotelDetails = {
   id: number;
   name: string;
@@ -9,7 +11,7 @@ export type HotelDetails = {
   gallery: string[];
   userRating: number;
   price: number;
-  currency: string;
+  currency: Currency;
 };
 
 type HotelLocation = {

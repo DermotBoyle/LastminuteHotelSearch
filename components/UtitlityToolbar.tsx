@@ -35,7 +35,6 @@ const UtilityStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     width: '100%',
-    height: '20%',
   },
   utilityItem: {
     flexDirection: 'row',

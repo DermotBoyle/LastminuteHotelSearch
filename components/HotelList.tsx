@@ -1,6 +1,8 @@
 import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {FlatList} from 'react-native-gesture-handler';
 import {HotelDetails} from '../queries/GetHotelListQuery';
+import HotelCard from './HotelCard';
 
 type HotelListProps = {
   hotelData: HotelDetails[];
@@ -8,17 +10,19 @@ type HotelListProps = {
 
 const HotelList: React.FC<HotelListProps> = props => {
   return (
-    <ScrollView>
-      {props.hotelData.map(hotel => {
-        return (
-          <View>
-            <Text>{hotel.name}</Text>
-            <Text>{hotel.location.address}</Text>
-          </View>
-        );
-      })}
-    </ScrollView>
+    <FlatList
+      style={styles.list}
+      data={props.hotelData}
+      renderItem={HotelCard}
+      keyExtractor={hotelData => `${hotelData.id}`}
+    />
   );
 };
+
+const styles = StyleSheet.create({
+  list: {
+    flex: 1,
+  },
+});
 
 export default HotelList;

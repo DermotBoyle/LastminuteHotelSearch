@@ -33,9 +33,10 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         style={styles.imageScroller}
         horizontal
         showsHorizontalScrollIndicator={false}
+        disableIntervalMomentum={true} // One child at a time
         pagingEnabled
         decelerationRate={0}
-        snapToInterval={IMAGE_WIDTH + 6}
+        snapToInterval={IMAGE_WIDTH + 6} //magic number change to IMAGE_MARGIN
         snapToAlignment="start"
         contentInset={{
           top: 0,
@@ -44,7 +45,14 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
           right: 0,
         }}>
         {hotelData.item.gallery.map(imgUri => {
-          return <Image source={{uri: imgUri}} style={styles.cardImage} />;
+          return (
+            <Image
+              source={{uri: imgUri}}
+              style={styles.cardImage}
+              defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
+              onError={error => console.log(error)}
+            />
+          );
         })}
       </ScrollView>
       <Text style={styles.addressText}>{hotelData.item.location.address}</Text>

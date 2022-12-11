@@ -5,7 +5,7 @@ import {HotelDetails} from '../queries/GetHotelListQuery';
 import HotelCard from './HotelCard';
 
 type HotelListProps = {
-  hotelData: HotelDetails[];
+  hotelData: HotelDetails[] | undefined;
 };
 
 const HotelList: React.FC<HotelListProps> = props => {

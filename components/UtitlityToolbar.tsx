@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {Dispatch, SetStateAction} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const UtilityToolbar = () => {
+type UtilityToolbar = {
+  setShowSortModal: Dispatch<SetStateAction<boolean>>;
+};
+
+const UtilityToolbar: React.FC<UtilityToolbar> = props => {
   return (
     <View style={UtilityStyles.utilityContainer}>
-      <TouchableHighlight onPress={() => {}}>
+      <TouchableHighlight onPress={() => props.setShowSortModal(true)}>
         <View style={UtilityStyles.utilityItem}>
           <Icon name="sort-variant" size={24} />
           <Text style={UtilityStyles.utilityItemText}>Sort</Text>

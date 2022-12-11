@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
+    marginBottom: 1,
   },
   modalListItemTopBorderRadius: {
     borderTopLeftRadius: 8,

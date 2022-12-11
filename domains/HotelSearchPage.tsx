@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text, StyleSheet} from 'react-native';
 import HotelList from '../components/HotelList';
-import UtilityToolbar from '../components/UtitlityToolbar';
+import UtilityToolbar from '../components/UtilityToolbar';
 import {useQuery} from 'react-query';
 import SortModal from '../components/SortModal';
 import {HotelDetails} from '../queries/GetHotelListQuery';

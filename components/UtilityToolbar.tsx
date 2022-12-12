@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type UtilityToolbar = {
   setShowSortModal: Dispatch<SetStateAction<boolean>>;
+  hasSortApplied: boolean;
 };
 
 const UtilityToolbar: React.FC<UtilityToolbar> = props => {
@@ -12,6 +13,7 @@ const UtilityToolbar: React.FC<UtilityToolbar> = props => {
     <View style={UtilityStyles.utilityContainer}>
       <TouchableHighlight onPress={() => props.setShowSortModal(true)}>
         <View style={UtilityStyles.utilityItem}>
+          {props.hasSortApplied && <View style={UtilityStyles.activeIcon} />}
           <Icon name="sort-variant" size={24} />
           <Text style={UtilityStyles.utilityItemText}>Sort</Text>
         </View>
@@ -41,6 +43,7 @@ const UtilityStyles = StyleSheet.create({
     width: '100%',
   },
   utilityItem: {
+    position: 'relative',
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
@@ -48,5 +51,14 @@ const UtilityStyles = StyleSheet.create({
   },
   utilityItemText: {
     marginLeft: 10,
+  },
+  activeIcon: {
+    position: 'absolute',
+    top: 8,
+    right: 12,
+    height: 8,
+    width: 8,
+    backgroundColor: '#F0527E',
+    borderRadius: 50,
   },
 });

@@ -1,11 +1,11 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import {FlatList} from 'react-native-gesture-handler';
-import {HotelDetails} from '../queries/GetHotelListQuery';
-import HotelCard from './HotelCard';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { FlatList } from 'react-native-gesture-handler'
+import { HotelDetails } from '../queries/GetHotelListQuery'
+import HotelCard from './HotelCard'
 
 type HotelListProps = {
-  hotelData: HotelDetails[] | undefined;
+  hotelData: HotelDetails[] | undefined,
 };
 
 const HotelList: React.FC<HotelListProps> = props => {
@@ -16,13 +16,13 @@ const HotelList: React.FC<HotelListProps> = props => {
       renderItem={HotelCard}
       keyExtractor={hotelData => `${hotelData.id}`}
     />
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   list: {
     flex: 1,
   },
-});
+})
 
-export default HotelList;
+export default HotelList

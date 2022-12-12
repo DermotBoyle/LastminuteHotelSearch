@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   ListRenderItem,
   Text,
@@ -7,11 +7,12 @@ import {
   Image,
   ScrollView,
   Dimensions,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {HotelDetails} from '../queries/GetHotelListQuery';
+} from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { HotelDetails } from '../queries/GetHotelListQuery'
 
-const IMAGE_WIDTH = Dimensions.get('window').width * 0.6;
+const IMAGE_WIDTH = Dimensions.get('window').width * 0.6
+const FULL_WIDTH_IMAGE = Dimensions.get('window').width * 0.95
 
 //TODO MOVE TO COMMON TYPE FILE
 
@@ -21,10 +22,9 @@ export enum Currency {
 
 const CurrencySymbolLabels: Record<Currency, string> = {
   [Currency.EUR]: '€',
-};
+}
 
-const getTotalWithCurrencySymbol = (currency: Currency, price: number) =>
-  `${CurrencySymbolLabels[currency]}${price} `;
+const getTotalWithCurrencySymbol = (currency: Currency, price: number) => `${CurrencySymbolLabels[currency]}${price} `
 
 const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
   return (
@@ -44,16 +44,26 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
           bottom: 0,
           right: 0,
         }}>
-        {hotelData.item.gallery.map(imgUri => {
-          return (
-            <Image
-              source={{uri: imgUri}}
-              style={styles.cardImage}
-              defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
-              onError={error => console.log(error)}
-            />
-          );
-        })}
+        {hotelData.item.gallery.length > 1
+          ? (hotelData.item.gallery.map(imgUri => {
+            return (
+              <Image
+                key={imgUri}
+                source={{ uri: imgUri }}
+                style={styles.cardImage}
+                defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
+                onError={error => console.log(error)}
+              />
+            )
+          })
+          )
+          :( <Image
+            source={{ uri: hotelData.item.gallery[0] }}
+            style={styles.cardImageFullWidth}
+            defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
+            onError={error => console.log(error)}
+          />
+          )}
       </ScrollView>
       <Text style={styles.addressText}>{hotelData.item.location.address}</Text>
       <Text style={styles.nameText}>{hotelData.item.name}</Text>
@@ -65,7 +75,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
               <Icon key={i} name="star" size={18} color={'#FFD700'} />
             ) : (
               <Icon key={i} name="star" size={18} color={'#EBEBED'} />
-            );
+            )
           })}
         </View>
         <View style={styles.userRatingContainer}>
@@ -84,8 +94,8 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         <Text style={styles.lastMinutePriceSubtext}>total</Text>
       </View>
     </View>
-  );
-};
+  )
+}
 
 //TODO PULL OUT COLORS INTO VAR
 
@@ -114,6 +124,12 @@ const styles = StyleSheet.create({
     width: IMAGE_WIDTH,
     borderRadius: 8,
     marginRight: 6,
+  },
+  cardImageFullWidth: {
+    flex: 1,
+    width: FULL_WIDTH_IMAGE,
+    resizeMode: 'cover',
+    borderRadius: 8,
   },
   addressText: {
     color: '#C7C7CA', // subtitle color
@@ -170,6 +186,6 @@ const styles = StyleSheet.create({
     color: '#F0527E',
     fontSize: 12,
   },
-});
+})
 
-export default HotelCard;
+export default HotelCard

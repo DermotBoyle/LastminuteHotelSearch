@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React, { Dispatch, SetStateAction } from 'react'
 import {
   Modal,
   Text,
@@ -7,43 +7,54 @@ import {
   FlatList,
   ListRenderItem,
   Pressable,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {SafeAreaView} from 'react-navigation';
-import {SortSelections} from '../domains/HotelSearchPage';
+} from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { SafeAreaView } from 'react-navigation'
+import { SortMethods, SortSelections } from '../domains/HotelSearchPage'
 
 type SortModalProps = {
-  isOpen: boolean;
-  setShowSortModal: Dispatch<SetStateAction<boolean>>;
-  activeSortSelection: SortSelections;
-  sortingDetails: SortProps[];
-  modalHeight?: number;
-  title: string;
-};
-
-type SortProps = {
-  type: SortSelections;
-  label: string;
-  sortingFunction: (type: SortSelections) => unknown;
+  isOpen: boolean,
+  setShowSortModal: Dispatch<SetStateAction<boolean>>,
+  activeSortSelection: SortSelections,
+  sortingDetails: SortMethods[],
+  modalHeight?: number,
+  title: string,
 };
 
 const SortModal: React.FC<SortModalProps> = props => {
-  const SortListItem: ListRenderItem<SortProps> = item => {
+  const SortListItem: ListRenderItem<SortMethods> = item => {
     return (
-      <Pressable onPress={() => item.item.sortingFunction(item.item.type)}>
-        <View
-          style={[
-            styles.modalListItem,
-            item.index === 0 && styles.modalListItemTopBorderRadius,
-          ]}>
-          <Text style={styles.modalListItemLabel}>{item.item.label}</Text>
-          {item.item.type === props.activeSortSelection && (
-            <Icon style={styles.modalListItemIcon} size={16} name="check" />
-          )}
-        </View>
-      </Pressable>
-    );
-  };
+      <>
+        {item.item.key !== undefined
+          ? <Pressable onPress={() => item.item.sortingFunction(item.item.type, item.item.key)}>
+            <View
+              style={[
+                styles.modalListItem,
+                item.index === 0 && styles.modalListItemTopBorderRadius,
+              ]}>
+              <Text style={styles.modalListItemLabel}>{item.item.label}</Text>
+              {item.item.type === props.activeSortSelection && (
+                <Icon style={styles.modalListItemIcon} size={16} name="check" />
+              )}
+            </View>
+          </Pressable>
+          : <Pressable onPress={() => item.item.sortingFunction(item.item.type)}>
+            <View
+              style={[
+                styles.modalListItem,
+                item.index === 0 && styles.modalListItemTopBorderRadius,
+              ]}>
+              <Text style={styles.modalListItemLabel}>{item.item.label}</Text>
+              {item.item.type === props.activeSortSelection && (
+                <Icon style={styles.modalListItemIcon} size={16} name="check" />
+              )}
+            </View>
+          </Pressable>
+        }
+      </>
+
+    )
+  }
 
   return (
     <SafeAreaView>
@@ -74,8 +85,8 @@ const SortModal: React.FC<SortModalProps> = props => {
         </View>
       </Modal>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   modalContainer: {
@@ -139,6 +150,6 @@ const styles = StyleSheet.create({
   modalListItemLabel: {
     fontWeight: '600',
   },
-});
+})
 
-export default SortModal;
+export default SortModal

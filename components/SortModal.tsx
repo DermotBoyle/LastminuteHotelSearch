@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { SafeAreaView } from 'react-navigation'
-import { SortMethods, SortSelections } from '../domains/HotelSearchPage'
+import { SortMethods, SortSelections } from '../types/SortTypes'
 
 type SortModalProps = {
   isOpen: boolean,
@@ -19,40 +19,24 @@ type SortModalProps = {
   sortingDetails: SortMethods[],
   modalHeight?: number,
   title: string,
+  applyFilter: (type: SortSelections) => void,
 };
 
 const SortModal: React.FC<SortModalProps> = props => {
-  const SortListItem: ListRenderItem<SortMethods> = item => {
+  const SortListItem: ListRenderItem<SortMethods> = ListItem => {
     return (
-      <>
-        {item.item.key !== undefined
-          ? <Pressable onPress={() => item.item.sortingFunction(item.item.type, item.item.key)}>
-            <View
-              style={[
-                styles.modalListItem,
-                item.index === 0 && styles.modalListItemTopBorderRadius,
-              ]}>
-              <Text style={styles.modalListItemLabel}>{item.item.label}</Text>
-              {item.item.type === props.activeSortSelection && (
-                <Icon style={styles.modalListItemIcon} size={16} name="check" />
-              )}
-            </View>
-          </Pressable>
-          : <Pressable onPress={() => item.item.sortingFunction(item.item.type)}>
-            <View
-              style={[
-                styles.modalListItem,
-                item.index === 0 && styles.modalListItemTopBorderRadius,
-              ]}>
-              <Text style={styles.modalListItemLabel}>{item.item.label}</Text>
-              {item.item.type === props.activeSortSelection && (
-                <Icon style={styles.modalListItemIcon} size={16} name="check" />
-              )}
-            </View>
-          </Pressable>
-        }
-      </>
-
+      <Pressable onPress={() => props.applyFilter( ListItem.item.type)}>
+        <View
+          style={[
+            styles.modalListItem,
+            ListItem.index === 0 && styles.modalListItemTopBorderRadius,
+          ]}>
+          <Text style={styles.modalListItemLabel}>{ListItem.item.label}</Text>
+          {ListItem.item.type === props.activeSortSelection && (
+            <Icon style={styles.modalListItemIcon} size={16} name="check" />
+          )}
+        </View>
+      </Pressable>
     )
   }
 
@@ -61,8 +45,7 @@ const SortModal: React.FC<SortModalProps> = props => {
       <Modal
         animationType="fade"
         transparent={true}
-        visible={props.isOpen}
-        onRequestClose={() => props.setShowSortModal(false)}>
+        visible={props.isOpen}>
         <View style={styles.modalContainer}>
           <View style={styles.modalBody}>
             <View style={styles.modalHeader}>

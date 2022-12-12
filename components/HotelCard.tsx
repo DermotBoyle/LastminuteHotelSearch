@@ -12,7 +12,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { HotelDetails } from '../queries/GetHotelListQuery'
 
 const IMAGE_WIDTH = Dimensions.get('window').width * 0.6
+const IMAGE_HEIGHT = Dimensions.get('window').height * 0.2
 const FULL_WIDTH_IMAGE = Dimensions.get('window').width * 0.95
+const CARD_HEIGHT = Dimensions.get('window').height * 0.4
 
 //TODO MOVE TO COMMON TYPE FILE
 
@@ -20,7 +22,7 @@ export enum Currency {
   EUR = 'EUR',
 }
 
-const CurrencySymbolLabels: Record<Currency, string> = {
+export const CurrencySymbolLabels: Record<Currency, string> = {
   [Currency.EUR]: '€',
 }
 
@@ -52,7 +54,6 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
                 source={{ uri: imgUri }}
                 style={styles.cardImage}
                 defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
-                onError={error => console.log(error)}
               />
             )
           })
@@ -61,7 +62,6 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
             source={{ uri: hotelData.item.gallery[0] }}
             style={styles.cardImageFullWidth}
             defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
-            onError={error => console.log(error)}
           />
           )}
       </ScrollView>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     margin: 10,
     borderRadius: 8,
-    height: 400,
+    height: CARD_HEIGHT,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -116,11 +116,11 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   imageScroller: {
-    height: 225,
+    height: IMAGE_HEIGHT,
     flexGrow: 0,
   },
   cardImage: {
-    height: 225,
+    height: IMAGE_HEIGHT,
     width: IMAGE_WIDTH,
     borderRadius: 8,
     marginRight: 6,

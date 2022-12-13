@@ -71,7 +71,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         <View style={styles.starContainer}>
           {new Array(5).fill(0).map((_, i) => {
             //TODO PULL OUT IN TO CONSTANT FOR CLARITY
-            return hotelData.item.stars > i + 1 ? (
+            return hotelData.item.stars > i ? (
               <Icon key={i} name="star" size={18} color={'#FFD700'} />
             ) : (
               <Icon key={i} name="star" size={18} color={'#EBEBED'} />

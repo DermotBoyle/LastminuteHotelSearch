@@ -1,19 +1,25 @@
-import { filterByBudget } from "../utils/filter"
-import { SortSelectionLabels, SortSelections } from "./SortTypes"
+import { filterByBudget, filterByStars } from "../utils/filter"
 
 export type BudgetRangeState = number[];
 
 export enum Filters {
-  BUDGET = "BUDGET"
+  BUDGET = "BUDGET",
+  STARS = "STARS"
 }
 
 export type FilterFnState = {
   [Filters.BUDGET]: BudgetRangeState,
+  [Filters.STARS]: number,
 }
 
-export type ReducerActions = {
-  type: Filters,
+export type ReducerActions =
+| {
+  type: Filters.BUDGET,
   payload: BudgetRangeState,
+}
+| {
+  type: Filters.STARS,
+  payload: number,
 }
 
 export type FilterOptions = {
@@ -24,13 +30,19 @@ export type FilterOptions = {
 
 export const filterLabels: Record<Filters, string> = {
   [Filters.BUDGET] : 'Budget',
+  [Filters.STARS] : "Stars",
 }
 
 export const filterMethods : Record<Filters, FilterOptions> = {
   [Filters.BUDGET] : {
     type: Filters.BUDGET,
-    label: SortSelectionLabels[SortSelections.RECOMMENDED],
+    label: filterLabels[Filters.BUDGET],
     filterFunction: filterByBudget,
+  },
+  [Filters.STARS] : {
+    type: Filters.STARS,
+    label: filterLabels[Filters.STARS],
+    filterFunction: filterByStars,
   },
 }
 

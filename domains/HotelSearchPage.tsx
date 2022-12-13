@@ -8,9 +8,9 @@ import { HotelDetails } from '../queries/GetHotelListQuery'
 import { applySort, sortAscendingNumber, sortDescendingNumber } from '../utils/sort'
 import FilterScreen from '../components/FilterModal'
 import { Currency } from '../components/HotelCard'
-import { FilterFnState, filterMethods, Filters, MAX_VALUE, MIN_VALUE } from '../types/FilterTypes'
+import { filterMethods, Filters, MAX_VALUE, MIN_VALUE } from '../types/FilterTypes'
 import { SortMethods, SortSelectionLabels, SortSelections } from '../types/SortTypes'
-import { filterByBudget, initialState, reducer } from '../utils/filter'
+import { filterByBudget, filterByStars, initialState, reducer } from '../utils/filter'
 
 export type HotelDetailKeys = keyof HotelDetails
 
@@ -25,7 +25,7 @@ const HotelSearchPage = () => {
     return data
   }
 
-  const { data, error, isLoading, refetch } = useQuery<HotelDetails[], Error>('getHotels', getHotels )
+  const { data, error, isLoading } = useQuery<HotelDetails[], Error>('getHotels', getHotels )
 
   /**
    * Modified Data state
@@ -42,7 +42,8 @@ const HotelSearchPage = () => {
    * Filter state and Filter reducer
    */
   const [ showFilterScreen, setShowFilterScreen ] = useState<boolean>(false)
-  const [ filterPredicateFunctions, setFilterPredicateFunctions ] = useState<Record<Filters, any>>({ [Filters.BUDGET]: filterByBudget  })
+  const [ filterPredicateFunctions, setFilterPredicateFunctions ] = useState<Record<Filters, any>>({ [Filters.BUDGET]: filterByBudget, [Filters.STARS]: filterByStars  })
+  // ADD FILTERS.STARS TO `filtersToBeApplied` TO TEST FILTER FN COMPOSITION
   const [ filtersToBeApplied, setFiltersToBeApplied ] = useState<Filters[]>([ Filters.BUDGET ])
   const [ state, dispatch ] = useReducer(reducer, initialState)
 
@@ -53,10 +54,10 @@ const HotelSearchPage = () => {
    * @param type
    */
   const applyFilter = (type?: SortSelections) => {
+    const copyOfData = data && [ ...data ]
     const sortType = type ?? activeSortSelection
     const filters = filtersToBeApplied.map((filter) => filterMethods[filter].filterFunction(state[filter]))
-    const filteredHotels = filters.flatMap((filterFn) =>  data?.filter(filterFn))
-
+    const filteredHotels = copyOfData?.filter(val => filters.every(predicate => predicate(val)))
     applySort(sortMethods, sortType, filteredHotels as HotelDetails[])
   }
 

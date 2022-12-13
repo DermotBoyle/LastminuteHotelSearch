@@ -17,8 +17,11 @@ export const sortDescendingNumber = <T extends Record<K, any>, K extends string>
   return [ ...itemArray ].sort((a, b) => b[key] - a[key])
 }
 
-export const applySort = (sortMethods: SortMethods[], activeSortSelection: SortSelections, filteredHotels?:HotelDetails[]) => {
+export const applySort = (sortMethods: SortMethods[], activeSortSelection: SortSelections, filteredHotels:HotelDetails[]) => {
   const sortedResult = sortMethods.find((sortMethod) => sortMethod.type === activeSortSelection)
-  sortedResult && sortedResult.sortingFunction(sortedResult.type, sortedResult.key, filteredHotels)
+
+  if (!sortedResult) return console.error('[applySort]: find sort method corrupted') // should never happen
+
+  sortedResult.sortingFunction(sortedResult.type, filteredHotels, sortedResult.key )
 }
 

@@ -28,7 +28,7 @@ const HotelSearchPage = () => {
   const { data, error, isLoading } = useQuery<HotelDetails[], Error>('getHotels', getHotels )
 
   /**
-   * Modified Data state
+   * Modified copy of data from API
    */
   const [ modifiedData, setModifiedData ] = useState<HotelDetails[] | null>(null)
 
@@ -39,13 +39,22 @@ const HotelSearchPage = () => {
   const [ activeSortSelection, setActiveSortSelection ] = useState<SortSelections>(SortSelections.RECOMMENDED)
 
   /**
-   * Filter state and Filter reducer
+   * Filter state
    */
   const [ showFilterScreen, setShowFilterScreen ] = useState<boolean>(false)
-  const [ filterPredicateFunctions, setFilterPredicateFunctions ] = useState<Record<Filters, any>>({ [Filters.BUDGET]: filterByBudget, [Filters.STARS]: filterByStars  })
-  // ADD FILTERS.STARS TO `filtersToBeApplied` TO TEST FILTER FN COMPOSITION
-  const [ filtersToBeApplied, setFiltersToBeApplied ] = useState<Filters[]>([ Filters.BUDGET ])
+  const [ filtersToBeApplied, setFiltersToBeApplied ] = useState<Filters[]>([ Filters.BUDGET ]) // Add filters here to test eg: Filters.Stars
+
+  /**
+   * Filter Reducer hook
+   * Complex filter object state better managed by reducer pattern
+   */
   const [ state, dispatch ] = useReducer(reducer, initialState)
+
+  const setTypeAndCloseModals = (type:SortSelections) => {
+    setActiveSortSelection(type)
+    setShowSortModal(false)
+    setShowFilterScreen(false)
+  }
 
   /**
    * This function creates an array of filter predicates
@@ -54,11 +63,17 @@ const HotelSearchPage = () => {
    * @param type
    */
   const applyFilter = (type?: SortSelections) => {
-    const copyOfData = data && [ ...data ]
+
+    if (!data) return console.error('[applyFilter] : data is missing or corrupt')
+
+    const copyOfData = [ ...data ]
     const sortType = type ?? activeSortSelection
     const filters = filtersToBeApplied.map((filter) => filterMethods[filter].filterFunction(state[filter]))
     const filteredHotels = copyOfData?.filter(val => filters.every(predicate => predicate(val)))
-    applySort(sortMethods, sortType, filteredHotels as HotelDetails[])
+
+    if (!filteredHotels) return console.error('[applyFilter] : filtered data is missing or corrupt')
+
+    applySort(sortMethods, sortType, filteredHotels)
   }
 
   /**
@@ -82,16 +97,9 @@ const HotelSearchPage = () => {
      * @param key
      * @param filteredHotels
      */
-  const sortAscendingBySelectionType = (type: SortSelections, key?: HotelDetailKeys, filteredHotels?: HotelDetails[]) => {
-    if (filteredHotels){
-      setModifiedData(sortAscendingNumber(filteredHotels, key))
-    } else if (data) {
-      setModifiedData(sortAscendingNumber(data, key))
-    }
-
-    setActiveSortSelection(type)
-    setShowSortModal(false)
-    setShowFilterScreen(false)
+  const sortAscendingBySelectionType = (type: SortSelections, filteredHotels: HotelDetails[], key?: HotelDetailKeys) => {
+    setModifiedData(sortAscendingNumber(filteredHotels, key))
+    setTypeAndCloseModals(type)
   }
 
   /**
@@ -104,36 +112,18 @@ const HotelSearchPage = () => {
      * @param key
      * @param filteredHotels
      */
-  const sortDescendingBySelectionType = (type: SortSelections, key?: HotelDetailKeys, filteredHotels?: HotelDetails[]) => {
-    if (filteredHotels){
-      setModifiedData(sortDescendingNumber(filteredHotels, key))
-    } else if (data) {
-      setModifiedData(sortDescendingNumber(data, key))
-    }
-
-    setActiveSortSelection(type)
-    setShowSortModal(false)
-    setShowFilterScreen(false)
+  const sortDescendingBySelectionType = (type: SortSelections, filteredHotels: HotelDetails[], key?: HotelDetailKeys) => {
+    setModifiedData(sortDescendingNumber(filteredHotels, key))
+    setTypeAndCloseModals(type)
   }
 
   /**
-   * Applies recommended sort by fetching data and checks if applyFilter()
-   * is to be applied on original data set
-   *
-   * Recommended sort presumes data returned from API is in correct state
-   *
+   * Recommended sort utilizes userRating
    * @param type
    */
-  const applyRecommendedSort = (type: SortSelections, key?: HotelDetailKeys, filteredHotels?: HotelDetails[]) => {
-    if (filteredHotels){
-      setModifiedData(sortDescendingNumber(filteredHotels, key))
-    } else if (data) {
-      setModifiedData(sortDescendingNumber(data, key))
-    }
-
-    setActiveSortSelection(type)
-    setShowSortModal(false)
-    setShowFilterScreen(false)
+  const applyRecommendedSort = (type: SortSelections, filteredHotels: HotelDetails[], key?: HotelDetailKeys) => {
+    setModifiedData(sortDescendingNumber(filteredHotels, key))
+    setTypeAndCloseModals(type)
   }
 
   /**
@@ -143,8 +133,7 @@ const HotelSearchPage = () => {
    */
   const resetFiltersAndApplyPossibleSort = () => {
     dispatch({ type: Filters.BUDGET, payload: [ MIN_VALUE, MAX_VALUE ] })
-    applySort(sortMethods, activeSortSelection)
-    setShowFilterScreen(false)
+    applySort(sortMethods, activeSortSelection, data as HotelDetails[])
   }
 
   const sortMethods: SortMethods[] = [
@@ -177,14 +166,11 @@ const HotelSearchPage = () => {
   }
 
   return (
-
     <View style={styles.pageContainer}>
       {showFilterScreen
         ? <FilterScreen
           currency={currency}
           setShowFilterScreen={setShowFilterScreen}
-          setFilterPredicateFunctions={setFilterPredicateFunctions}
-          filterPredicateFunctions={filterPredicateFunctions}
           applyFilter={applyFilter}
           resetFiltersAndApplyPossibleSort={resetFiltersAndApplyPossibleSort}
           state={state}

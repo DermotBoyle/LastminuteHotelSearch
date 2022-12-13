@@ -9,8 +9,6 @@ import { FilterFnState, Filters, MAX_VALUE, MIN_VALUE, ReducerActions } from '..
 type FilterScreenProps = {
   currency?: Currency,
   setShowFilterScreen: Dispatch<SetStateAction<boolean>>,
-  setFilterPredicateFunctions: Dispatch<SetStateAction<Record<Filters, any>>>,
-  filterPredicateFunctions: Record<Filters, any>,
   applyFilter: () => void,
   resetFiltersAndApplyPossibleSort: () => void,
   state: FilterFnState,

@@ -2,10 +2,10 @@ import { HotelDetailKeys } from "../domains/HotelSearchPage"
 import { HotelDetails } from "../queries/GetHotelListQuery"
 
 export type SortMethods = {
-  key?: HotelDetailKeys,
+  key: HotelDetailKeys,
   type: SortSelections,
   label: string,
-  sortingFunction: ((type: SortSelections, key?: keyof HotelDetails, filteredHotels?: HotelDetails[]) => void),
+  sortingFunction: ((type: SortSelections, filteredHotels: HotelDetails[], key: keyof HotelDetails) => void),
 }
 
 export enum SortSelections {

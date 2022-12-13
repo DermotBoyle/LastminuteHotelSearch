@@ -2,7 +2,6 @@ import React, { useMemo, useReducer, useState } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 import HotelList from '../components/HotelList'
 import UtilityToolbar from '../components/UtilityToolbar'
-import { useQuery } from 'react-query'
 import SortModal from '../components/SortModal'
 import { HotelDetails } from '../queries/GetHotelListQuery'
 import { applySort, sortAscendingNumber, sortDescendingNumber } from '../utils/sort'
@@ -11,23 +10,15 @@ import { FilterFnState, filterMethods, Filters, MAX_VALUE, MIN_VALUE } from '../
 import { SortMethods, SortSelectionLabels, SortSelections } from '../types/SortTypes'
 import { reducer } from '../utils/filter'
 import { Currency } from '../utils/currency'
+import { useHotelList } from '../queries/useHotelList'
 
 export type HotelDetailKeys = keyof HotelDetails
 
 const initialFilterState: FilterFnState = { 'BUDGET' : [ MIN_VALUE, MAX_VALUE ], 'STARS': 4 }
 
 const HotelSearchPage = () => {
-  const getHotels = async () => {
-    const res = await fetch(
-      'https://run.mocky.io/v3/eef3c24d-5bfd-4881-9af7-0b404ce09507',
-    )
 
-    const data = await res.json()
-
-    return data
-  }
-
-  const { data, error, isLoading } = useQuery<HotelDetails[], Error>('getHotels', getHotels )
+  const { data, error, isLoading } = useHotelList()
 
   /**
    * Modified copy of data from API

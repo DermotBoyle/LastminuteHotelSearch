@@ -66,7 +66,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         <View style={styles.starContainer}>
           {new Array(5).fill(0).map((_, i) =>
             hasHotelAchievedStar(hotelData.item.stars, i)
-              ? <Icon key={i} name="star" size={18} color={'#FFD700'} />
+              ? <Icon testID='achieved-star' key={i} name="star" size={18} color={'#FFD700'} />
               : <Icon key={i} name="star" size={18} color={'#EBEBED'} />,
           )}
         </View>
@@ -77,7 +77,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         </View>
       </View>
       <View style={styles.priceContainer}>
-        <Text style={styles.lastMinutePriceText}>
+        <Text style={styles.lastMinutePriceText} testID="price-test">
           {getTotalWithCurrencySymbol(hotelData.item.currency,hotelData.item.price)}
         </Text>
         <Text style={styles.lastMinutePriceSubtext}>total</Text>

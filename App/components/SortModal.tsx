@@ -9,7 +9,6 @@ import {
   Pressable,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { SafeAreaView } from 'react-navigation'
 import { SortMethods, SortSelections } from '../types/SortTypes'
 
 type SortModalProps = {
@@ -41,33 +40,32 @@ const SortModal: React.FC<SortModalProps> = props => {
   }
 
   return (
-    <SafeAreaView>
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={props.isOpen}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalBody}>
-            <View style={styles.modalHeader}>
-              <Pressable
-                style={styles.modalCloseIcon}
-                onPress={() => props.setShowSortModal(false)}>
-                <Icon style={styles.modalCloseIcon} size={24} name="close" />
-              </Pressable>
-              <Text style={styles.modalTitle}>{props.title}</Text>
-            </View>
-            <View style={styles.modalListBody}>
-              <FlatList
-                style={styles.sortList}
-                data={props.sortingDetails}
-                renderItem={SortListItem}
-                keyExtractor={sort => sort.label}
-              />
-            </View>
+    <Modal
+      testID='sort-modal'
+      animationType="fade"
+      transparent={true}
+      visible={props.isOpen}>
+      <View style={styles.modalContainer}>
+        <View style={styles.modalBody}>
+          <View style={styles.modalHeader}>
+            <Pressable
+              style={styles.modalCloseIcon}
+              onPress={() => props.setShowSortModal(false)}>
+              <Icon style={styles.modalCloseIcon} size={24} name="close" />
+            </Pressable>
+            <Text style={styles.modalTitle}>{props.title}</Text>
+          </View>
+          <View style={styles.modalListBody}>
+            <FlatList
+              style={styles.sortList}
+              data={props.sortingDetails}
+              renderItem={SortListItem}
+              keyExtractor={sort => sort.label}
+            />
           </View>
         </View>
-      </Modal>
-    </SafeAreaView>
+      </View>
+    </Modal>
   )
 }
 

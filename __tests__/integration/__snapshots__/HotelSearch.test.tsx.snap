@@ -1,0 +1,2488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
+<View
+  style={
+    {
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffff",
+        "flexDirection": "row",
+        "height": 50,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "justifyContent": "center",
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#F0527E",
+              "borderRadius": 50,
+              "height": 8,
+              "position": "absolute",
+              "right": 12,
+              "top": -4,
+              "width": 8,
+            }
+          }
+        />
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰒿
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Sort
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "position": "relative",
+          },
+          {
+            "borderColor": "#EBEBED",
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰘮
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Filter
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "justifyContent": "center",
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰦂
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Map
+        </Text>
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    data={
+      [
+        {
+          "checkIn": {
+            "from": "14:00",
+            "to": "20:00",
+          },
+          "checkOut": {
+            "from": "07:00",
+            "to": "10:00",
+          },
+          "contact": {
+            "email": "park_plaza@gmail.com",
+            "phoneNumber": "+39 24322342",
+          },
+          "currency": "EUR",
+          "gallery": [
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1499779963/Swindon_yjsrwz.jpg",
+          ],
+          "id": 12321,
+          "location": {
+            "address": "6 Hercules Road",
+            "city": "London",
+            "latitude": 51.49845,
+            "longitude": -0.11343,
+          },
+          "name": "Park Plaza London Waterloo",
+          "price": 120,
+          "stars": 4,
+          "userRating": 9.8,
+        },
+        {
+          "checkIn": {
+            "from": "11:00",
+            "to": "20:00",
+          },
+          "checkOut": {
+            "from": "07:00",
+            "to": "10:00",
+          },
+          "contact": {
+            "email": "the_z_hotel@gmail.com",
+            "phoneNumber": "+44 435432",
+          },
+          "currency": "EUR",
+          "gallery": [
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+          ],
+          "id": 24234,
+          "location": {
+            "address": "136-144 City Road",
+            "city": "London",
+            "latitude": 51.52684,
+            "longitude": -0.08857,
+          },
+          "name": "The Z Hotel Shoreditch",
+          "price": 160,
+          "stars": 5,
+          "userRating": 7.4,
+        },
+        {
+          "checkIn": {
+            "from": "11:00",
+            "to": "20:00",
+          },
+          "checkOut": {
+            "from": "07:00",
+            "to": "10:00",
+          },
+          "contact": {
+            "email": "the_z_hotel@gmail.com",
+            "phoneNumber": "+44 435432",
+          },
+          "currency": "EUR",
+          "gallery": [
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+          ],
+          "id": 12325,
+          "location": {
+            "address": "136-144 City Road",
+            "city": "London",
+            "latitude": 51.52684,
+            "longitude": -0.08857,
+          },
+          "name": "The Z Hotel Shoreditch",
+          "price": 200,
+          "stars": 5,
+          "userRating": 7.4,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderRadius": 8,
+              "elevation": 4,
+              "height": 533.6,
+              "margin": 10,
+              "position": "relative",
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            }
+          }
+        >
+          <RCTScrollView
+            contentInset={
+              {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+              }
+            }
+            decelerationRate={0}
+            disableIntervalMomentum={true}
+            horizontal={true}
+            pagingEnabled={true}
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="start"
+            snapToInterval={456}
+            style={
+              {
+                "flexGrow": 0,
+                "height": 266.8,
+              }
+            }
+          >
+            <View>
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1499779963/Swindon_yjsrwz.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "flex": 1,
+                    "resizeMode": "cover",
+                    "width": 712.5,
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+          <Text
+            style={
+              {
+                "color": "#C7C7CA",
+                "fontSize": 14,
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            6 Hercules Road
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 18,
+                "fontWeight": "600",
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            Park Plaza London Waterloo
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "paddingHorizontal": 16,
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#EBEBED",
+                  "borderEndWidth": 2,
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#EBEBED",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+              >
+                󰓎
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#A0CA3F",
+                  "borderRadius": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#ffff",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                98
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "baseline",
+                "bottom": 12,
+                "display": "flex",
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 24,
+                  "fontWeight": "600",
+                }
+              }
+              testID="price-test"
+            >
+              €120 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 12,
+                }
+              }
+            >
+              total
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderRadius": 8,
+              "elevation": 4,
+              "height": 533.6,
+              "margin": 10,
+              "position": "relative",
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            }
+          }
+        >
+          <RCTScrollView
+            contentInset={
+              {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+              }
+            }
+            decelerationRate={0}
+            disableIntervalMomentum={true}
+            horizontal={true}
+            pagingEnabled={true}
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="start"
+            snapToInterval={456}
+            style={
+              {
+                "flexGrow": 0,
+                "height": 266.8,
+              }
+            }
+          >
+            <View>
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+          <Text
+            style={
+              {
+                "color": "#C7C7CA",
+                "fontSize": 14,
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            136-144 City Road
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 18,
+                "fontWeight": "600",
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            The Z Hotel Shoreditch
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "paddingHorizontal": 16,
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#EBEBED",
+                  "borderEndWidth": 2,
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#A0CA3F",
+                  "borderRadius": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#ffff",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                74
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "baseline",
+                "bottom": 12,
+                "display": "flex",
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 24,
+                  "fontWeight": "600",
+                }
+              }
+              testID="price-test"
+            >
+              €160 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 12,
+                }
+              }
+            >
+              total
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderRadius": 8,
+              "elevation": 4,
+              "height": 533.6,
+              "margin": 10,
+              "position": "relative",
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            }
+          }
+        >
+          <RCTScrollView
+            contentInset={
+              {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+              }
+            }
+            decelerationRate={0}
+            disableIntervalMomentum={true}
+            horizontal={true}
+            pagingEnabled={true}
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="start"
+            snapToInterval={456}
+            style={
+              {
+                "flexGrow": 0,
+                "height": 266.8,
+              }
+            }
+          >
+            <View>
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+          <Text
+            style={
+              {
+                "color": "#C7C7CA",
+                "fontSize": 14,
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            136-144 City Road
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 18,
+                "fontWeight": "600",
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            The Z Hotel Shoreditch
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "paddingHorizontal": 16,
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#EBEBED",
+                  "borderEndWidth": 2,
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#A0CA3F",
+                  "borderRadius": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#ffff",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                74
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "baseline",
+                "bottom": 12,
+                "display": "flex",
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 24,
+                  "fontWeight": "600",
+                }
+              }
+              testID="price-test"
+            >
+              €200 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 12,
+                }
+              }
+            >
+              total
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    testID="sort-modal"
+    transparent={true}
+    visible={false}
+  />
+</View>
+`;
+
+exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
+<View
+  style={
+    {
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffff",
+        "flexDirection": "row",
+        "height": 50,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "justifyContent": "center",
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#F0527E",
+              "borderRadius": 50,
+              "height": 8,
+              "position": "absolute",
+              "right": 12,
+              "top": -4,
+              "width": 8,
+            }
+          }
+        />
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰒿
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Sort
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "position": "relative",
+          },
+          {
+            "borderColor": "#EBEBED",
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰘮
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Filter
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "justifyContent": "center",
+          "position": "relative",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": undefined,
+                "fontSize": 24,
+              },
+              undefined,
+              {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          󰦂
+        </Text>
+        <Text
+          style={
+            {
+              "marginLeft": 10,
+            }
+          }
+        >
+          Map
+        </Text>
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    data={
+      [
+        {
+          "checkIn": {
+            "from": "11:00",
+            "to": "20:00",
+          },
+          "checkOut": {
+            "from": "07:00",
+            "to": "10:00",
+          },
+          "contact": {
+            "email": "the_z_hotel@gmail.com",
+            "phoneNumber": "+44 435432",
+          },
+          "currency": "EUR",
+          "gallery": [
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+          ],
+          "id": 12325,
+          "location": {
+            "address": "136-144 City Road",
+            "city": "London",
+            "latitude": 51.52684,
+            "longitude": -0.08857,
+          },
+          "name": "The Z Hotel Shoreditch",
+          "price": 200,
+          "stars": 5,
+          "userRating": 7.4,
+        },
+        {
+          "checkIn": {
+            "from": "14:00",
+            "to": "20:00",
+          },
+          "checkOut": {
+            "from": "07:00",
+            "to": "10:00",
+          },
+          "contact": {
+            "email": "park_plaza@gmail.com",
+            "phoneNumber": "+39 24322342",
+          },
+          "currency": "EUR",
+          "gallery": [
+            "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1499779963/Swindon_yjsrwz.jpg",
+          ],
+          "id": 12321,
+          "location": {
+            "address": "6 Hercules Road",
+            "city": "London",
+            "latitude": 51.49845,
+            "longitude": -0.11343,
+          },
+          "name": "Park Plaza London Waterloo",
+          "price": 120,
+          "stars": 4,
+          "userRating": 9.8,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderRadius": 8,
+              "elevation": 4,
+              "height": 533.6,
+              "margin": 10,
+              "position": "relative",
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            }
+          }
+        >
+          <RCTScrollView
+            contentInset={
+              {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+              }
+            }
+            decelerationRate={0}
+            disableIntervalMomentum={true}
+            horizontal={true}
+            pagingEnabled={true}
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="start"
+            snapToInterval={456}
+            style={
+              {
+                "flexGrow": 0,
+                "height": 266.8,
+              }
+            }
+          >
+            <View>
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487613/Exterior_ajaxnb.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487565/Dining_uili4h.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_2_eobvne.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487564/Dining_1_aijns9.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487580/Lounge_1_qakzs8.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487579/Reception_t5mjkp.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1430487578/Lounge_gzoj1o.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "height": 266.8,
+                    "marginRight": 6,
+                    "width": 450,
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+          <Text
+            style={
+              {
+                "color": "#C7C7CA",
+                "fontSize": 14,
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            136-144 City Road
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 18,
+                "fontWeight": "600",
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            The Z Hotel Shoreditch
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "paddingHorizontal": 16,
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#EBEBED",
+                  "borderEndWidth": 2,
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#A0CA3F",
+                  "borderRadius": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#ffff",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                74
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "baseline",
+                "bottom": 12,
+                "display": "flex",
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 24,
+                  "fontWeight": "600",
+                }
+              }
+            >
+              €200 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 12,
+                }
+              }
+            >
+              total
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderRadius": 8,
+              "elevation": 4,
+              "height": 533.6,
+              "margin": 10,
+              "position": "relative",
+              "shadowColor": "#000",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            }
+          }
+        >
+          <RCTScrollView
+            contentInset={
+              {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+              }
+            }
+            decelerationRate={0}
+            disableIntervalMomentum={true}
+            horizontal={true}
+            pagingEnabled={true}
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="start"
+            snapToInterval={456}
+            style={
+              {
+                "flexGrow": 0,
+                "height": 266.8,
+              }
+            }
+          >
+            <View>
+              <Image
+                defaultSource={
+                  {
+                    "testUri": "../../../App/assets/photos/lastminute_default_photo.jpeg",
+                  }
+                }
+                source={
+                  {
+                    "uri": "https://res.cloudinary.com/lastminute/image/upload/t_OSE_redes_item_view/v1499779963/Swindon_yjsrwz.jpg",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 8,
+                    "flex": 1,
+                    "resizeMode": "cover",
+                    "width": 712.5,
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+          <Text
+            style={
+              {
+                "color": "#C7C7CA",
+                "fontSize": 14,
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            6 Hercules Road
+          </Text>
+          <Text
+            style={
+              {
+                "fontSize": 18,
+                "fontWeight": "600",
+                "paddingBottom": 8,
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            Park Plaza London Waterloo
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "paddingHorizontal": 16,
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "borderColor": "#EBEBED",
+                  "borderEndWidth": 2,
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "marginRight": 8,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#FFD700",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+                testID="achieved-star"
+              >
+                󰓎
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  [
+                    {
+                      "color": "#EBEBED",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    {},
+                  ]
+                }
+              >
+                󰓎
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": "#A0CA3F",
+                  "borderRadius": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "color": "#ffff",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                98
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "baseline",
+                "bottom": 12,
+                "display": "flex",
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 24,
+                  "fontWeight": "600",
+                }
+              }
+            >
+              €120 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#F0527E",
+                  "fontSize": 12,
+                }
+              }
+            >
+              total
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    testID="sort-modal"
+    transparent={true}
+    visible={false}
+  />
+</View>
+`;

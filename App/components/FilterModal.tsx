@@ -48,7 +48,7 @@ const FilterScreen: React.FC <FilterScreenProps> = (props) => {
       <View style={styles.filterBodyContainer}>
         <View style={styles.budgetContainer}>
           <Text>Budget</Text>
-          <View style={styles.sliderContainer}>
+          <View testID='slider-container' style={styles.sliderContainer}>
             <Text style={styles.sliderAmountText}>{getSliderAmount(props.state[Filters.BUDGET])}</Text>
             <MultiSlider
               values={[ MIN_VALUE, MAX_VALUE ]}

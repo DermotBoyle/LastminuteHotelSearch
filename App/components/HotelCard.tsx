@@ -11,11 +11,14 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { HotelDetails } from '../queries/GetHotelListQuery'
 import { getTotalWithCurrencySymbol } from '../utils/currency'
+import { fontSizes } from '../utils/fontSizes'
 
-const IMAGE_WIDTH = Dimensions.get('window').width * 0.6
-const IMAGE_HEIGHT = Dimensions.get('window').height * 0.2
-const FULL_WIDTH_IMAGE = Dimensions.get('window').width * 0.95
-const CARD_HEIGHT = Dimensions.get('window').height * 0.4
+const { height, width } = Dimensions.get('window')
+
+const IMAGE_WIDTH = width * 0.6
+const IMAGE_HEIGHT = height * 0.225
+const FULL_WIDTH_IMAGE = width * 0.95
+const CARD_HEIGHT = height * 0.48
 const IMAGE_MARGIN = 6
 
 const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
@@ -66,8 +69,8 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         <View style={styles.starContainer}>
           {new Array(5).fill(0).map((_, i) =>
             hasHotelAchievedStar(hotelData.item.stars, i)
-              ? <Icon testID='achieved-star' key={i} name="star" size={18} color={'#FFD700'} />
-              : <Icon key={i} name="star" size={18} color={'#EBEBED'} />,
+              ? <Icon testID='achieved-star' key={i} name="star" size={fontSizes.medium} color={'#FFD700'} />
+              : <Icon key={i} name="star" size={fontSizes.medium} color={'#EBEBED'} />,
           )}
         </View>
         <View style={styles.userRatingContainer}>
@@ -120,13 +123,13 @@ const styles = StyleSheet.create({
   },
   addressText: {
     color: '#C7C7CA',
-    fontSize: 14,
+    fontSize: fontSizes.small,
     paddingHorizontal: 16,
     paddingTop: 16,
     paddingBottom: 8,
   },
   nameText: {
-    fontSize: 18,
+    fontSize: fontSizes.medium,
     paddingHorizontal: 16,
     paddingBottom: 8,
     fontWeight: '600',
@@ -148,12 +151,16 @@ const styles = StyleSheet.create({
   },
   userRatingContainer: {
     backgroundColor: '#A0CA3F',
-    padding: 4,
+    padding: 2,
     borderRadius: 8,
+    height: width * 0.06,
+    width: width * 0.06,
   },
   userRatingText: {
     color: '#ffff',
     fontWeight: '600',
+    fontSize: fontSizes.small,
+    textAlign: 'center',
   },
   priceContainer: {
     position: 'absolute',
@@ -165,12 +172,12 @@ const styles = StyleSheet.create({
   },
   lastMinutePriceText: {
     color: '#F0527E',
-    fontSize: 24,
+    fontSize: fontSizes.large,
     fontWeight: '600',
   },
   lastMinutePriceSubtext: {
     color: '#F0527E',
-    fontSize: 12,
+    fontSize: fontSizes.small,
   },
 })
 

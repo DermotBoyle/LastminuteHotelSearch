@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import PrimaryButton from './PrimaryButton'
 import { FilterFnState, Filters, MAX_VALUE, MIN_VALUE, ReducerActions } from '../types/FilterTypes'
 import { Currency, CurrencySymbolLabels } from '../utils/currency'
+import { fontSizes, height, width } from '../utils/fontSizes'
 
 type FilterScreenProps = {
   currency?: Currency,
@@ -38,7 +39,7 @@ const FilterScreen: React.FC <FilterScreenProps> = (props) => {
     <View style={styles.screenContainer}>
       <View style={styles.screenHeader}>
         <Pressable style={styles.closeIconContainer}>
-          <Icon name="close" size={24} onPress={() => props.setShowFilterScreen(false)} />
+          <Icon name="close" size={fontSizes.large} onPress={() => props.setShowFilterScreen(false)} />
         </Pressable>
         <Text style={styles.titleText}>Filters</Text>
         <Pressable style={styles.resetAllContainer} onPress={() => props.resetFiltersAndApplyPossibleSort()}>
@@ -47,16 +48,18 @@ const FilterScreen: React.FC <FilterScreenProps> = (props) => {
       </View>
       <View style={styles.filterBodyContainer}>
         <View style={styles.budgetContainer}>
-          <Text>Budget</Text>
+          <Text style={styles.budgetLabel}>Budget</Text>
           <View testID='slider-container' style={styles.sliderContainer}>
             <Text style={styles.sliderAmountText}>{getSliderAmount(props.state[Filters.BUDGET])}</Text>
             <MultiSlider
+              markerStyle={{ height: fontSizes.small, width: fontSizes.small }}
               values={[ MIN_VALUE, MAX_VALUE ]}
               min={MIN_VALUE}
               max={MAX_VALUE}
               onValuesChange={(val) => props.dispatch({ type: Filters.BUDGET, payload: val })}
               minMarkerOverlapDistance={50}
               step={20}
+              sliderLength={width * 0.75}
             />
           </View>
         </View>
@@ -78,21 +81,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: "#ffff",
     alignItems: 'center',
-    height: 50,
+    height: height * 0.085,
     paddingHorizontal: 16,
   },
   titleText: {
-    fontSize: 16,
+    fontSize: fontSizes.medium,
     fontWeight: '600',
     textAlign: 'center',
     width: '40%',
   },
   resetAllContainer: {
     width: '30%',
+    paddingEnd: "2%",
   },
   resetText: {
     color: "#F0527E",
     textAlign: 'right',
+    fontSize: fontSizes.small,
   },
   closeIconContainer: {
     width: '30%',
@@ -101,8 +106,13 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
   },
+  budgetLabel: {
+    fontSize: fontSizes.medium,
+    fontWeight: '600',
+    marginBottom: height * 0.015,
+  },
   budgetContainer: {
-    height: 120,
+    height: height * 0.25,
     marginTop: '10%',
   },
   sliderContainer: {
@@ -118,7 +128,7 @@ const styles = StyleSheet.create({
   sliderAmountText: {
     width: "100%",
     textAlign: 'left',
-    fontSize: 14,
+    fontSize: fontSizes.small,
     paddingHorizontal: 16,
     marginTop: -8,
     marginBottom: 8,
@@ -128,7 +138,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    height: "10%",
+    height: height * 0.125,
     paddingHorizontal: 24,
     backgroundColor: '#ffff',
   },

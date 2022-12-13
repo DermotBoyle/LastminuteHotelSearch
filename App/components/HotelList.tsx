@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import { HotelDetails } from '../queries/GetHotelListQuery'
+import { fontSizes } from '../utils/fontSizes'
 import HotelCard from './HotelCard'
 
 type HotelListProps = {
@@ -40,13 +41,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   noResultsFoundText: {
-    fontSize: 18,
+    fontSize: fontSizes.large,
     fontWeight: '600',
     paddingBottom: 12,
   },
   removeFiltersText: {
     textAlign: "center",
-
+    fontSize: fontSizes.small,
   },
 
 })

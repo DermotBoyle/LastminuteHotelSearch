@@ -7,9 +7,11 @@ import {
   FlatList,
   ListRenderItem,
   Pressable,
+  Dimensions,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { SortMethods, SortSelections } from '../types/SortTypes'
+import { fontSizes, height, width } from '../utils/fontSizes'
 
 type SortModalProps = {
   isOpen: boolean,
@@ -20,6 +22,8 @@ type SortModalProps = {
   title: string,
   applyFilter: (type: SortSelections) => void,
 };
+
+const MODAL_HEIGHT = Dimensions.get('window').height
 
 const SortModal: React.FC<SortModalProps> = props => {
   const SortListItem: ListRenderItem<SortMethods> = ListItem => {
@@ -51,7 +55,7 @@ const SortModal: React.FC<SortModalProps> = props => {
             <Pressable
               style={styles.modalCloseIcon}
               onPress={() => props.setShowSortModal(false)}>
-              <Icon style={styles.modalCloseIcon} size={24} name="close" />
+              <Icon style={styles.modalCloseIcon} size={fontSizes.medium} name="close" />
             </Pressable>
             <Text style={styles.modalTitle}>{props.title}</Text>
           </View>
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   modalBody: {
-    flex: 0.3,
+    flex: 0.45,
     backgroundColor: '#EBEBED',
     borderTopRightRadius: 8,
     borderTopLeftRadius: 8,
@@ -93,18 +97,15 @@ const styles = StyleSheet.create({
   },
   modalCloseIcon: {
     position: 'absolute',
-    top: 8,
-    marginLeft: 8,
+    top: height * 0.015,
+    marginLeft: width * 0.015,
     zIndex: 2,
   },
   modalTitle: {
     width: '100%',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: fontSizes.medium,
     fontWeight: '600',
-  },
-  sortList: {
-    flex: 1,
   },
   modalListBody: {
     flex: 1,
@@ -114,8 +115,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     backgroundColor: '#ffffff',
-    height: 50,
     justifyContent: 'space-between',
+    height: MODAL_HEIGHT * 0.07,
     alignItems: 'center',
     paddingHorizontal: 16,
     marginBottom: 1,
@@ -127,9 +128,11 @@ const styles = StyleSheet.create({
   modalListItemIcon: {
     color: '#F0527E',
     fontWeight: '600',
+    fontSize: fontSizes.medium,
   },
   modalListItemLabel: {
     fontWeight: '600',
+    fontSize: fontSizes.small,
   },
 })
 

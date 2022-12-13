@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react'
 import { Text, View, StyleSheet, Pressable } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { fontSizes, height } from '../utils/fontSizes'
 
 type UtilityToolbar = {
   setShowSortModal: Dispatch<SetStateAction<boolean>>,
@@ -14,19 +15,19 @@ const UtilityToolbar: React.FC<UtilityToolbar> = props => {
       <Pressable style={UtilityStyles.utilityItem} onPress={() => props.setShowSortModal(true)}>
         <View style={UtilityStyles.utilityItemDetail}>
           {props.hasSortApplied && <View style={UtilityStyles.activeIcon} />}
-          <Icon name="sort-variant" size={24} />
+          <Icon name="sort-variant" size={fontSizes.medium} />
           <Text style={UtilityStyles.utilityItemText}>Sort</Text>
         </View>
       </Pressable>
       <Pressable style={[ UtilityStyles.utilityItem, UtilityStyles.middleUtilityItem ]} onPress={() => props.setShowFilterScreen(true)}>
         <View style={UtilityStyles.utilityItemDetail}>
-          <Icon name="tune" size={24} />
+          <Icon name="tune" size={fontSizes.medium} />
           <Text style={UtilityStyles.utilityItemText}>Filter</Text>
         </View>
       </Pressable>
       <Pressable style={UtilityStyles.utilityItem}  onPress={() => {}}>
         <View style={UtilityStyles.utilityItemDetail}>
-          <Icon name="map-outline" size={24} />
+          <Icon name="map-outline" size={fontSizes.medium} />
           <Text style={UtilityStyles.utilityItemText}>Map</Text>
         </View>
       </Pressable>
@@ -41,7 +42,7 @@ const UtilityStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: "#ffff",
-    height: 50,
+    height: height * 0.075,
     alignItems: 'center',
   },
   utilityItem: {
@@ -59,6 +60,7 @@ const UtilityStyles = StyleSheet.create({
   },
   utilityItemText: {
     marginLeft: 10,
+    fontSize: fontSizes.small,
   },
   middleUtilityItem: {
     borderLeftWidth: 1,

@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import HotelSearchPage from './App/domains/HotelSearchPage'
-import { theme } from './App/variables'
+import HotelSearchPage from './domains/HotelSearchPage'
+import { theme } from './variables'
 
 const Stack = createStackNavigator()
 

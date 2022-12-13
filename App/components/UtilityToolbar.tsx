@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react'
 import { Text, View, StyleSheet, Pressable } from 'react-native'
-import { TouchableHighlight } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 type UtilityToolbar = {

@@ -1,4 +1,4 @@
-import { HotelDetailKeys } from "../domains/HotelSearchPage"
+import { HotelDetailKeys } from "../App/domains/HotelSearchPage"
 import { HotelDetails } from "../queries/GetHotelListQuery"
 
 export type SortMethods = {

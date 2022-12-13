@@ -2,9 +2,9 @@ import React, { Dispatch, SetStateAction, useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import MultiSlider from '@ptomasroos/react-native-multi-slider'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { Currency, CurrencySymbolLabels } from './HotelCard'
 import PrimaryButton from './PrimaryButton'
 import { FilterFnState, Filters, MAX_VALUE, MIN_VALUE, ReducerActions } from '../types/FilterTypes'
+import { Currency, CurrencySymbolLabels } from '../utils/currency'
 
 type FilterScreenProps = {
   currency?: Currency,

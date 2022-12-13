@@ -10,27 +10,22 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { HotelDetails } from '../queries/GetHotelListQuery'
+import { getTotalWithCurrencySymbol } from '../utils/currency'
 
 const IMAGE_WIDTH = Dimensions.get('window').width * 0.6
 const IMAGE_HEIGHT = Dimensions.get('window').height * 0.2
 const FULL_WIDTH_IMAGE = Dimensions.get('window').width * 0.95
 const CARD_HEIGHT = Dimensions.get('window').height * 0.4
-
-//TODO MOVE TO COMMON TYPE FILE
-
-export enum Currency {
-  EUR = 'EUR',
-}
-
-export const CurrencySymbolLabels: Record<Currency, string> = {
-  [Currency.EUR]: '€',
-}
-
-const getTotalWithCurrencySymbol = (currency: Currency, price: number) => `${CurrencySymbolLabels[currency]}${price} `
+const IMAGE_MARGIN = 6
 
 const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
+
+  const hasHotelAchievedStar = (stars: number, index: number) => stars > index
+  const hotelUserRatingOutOf100 = (userRating: number) => userRating * 10
+
   return (
     <View style={styles.cardContainer}>
+      {/** Virtual scroller (FlatList) would be better here not to load all images at once */}
       <ScrollView
         style={styles.imageScroller}
         horizontal
@@ -38,7 +33,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         disableIntervalMomentum={true} // One child at a time
         pagingEnabled
         decelerationRate={0}
-        snapToInterval={IMAGE_WIDTH + 6} //magic number change to IMAGE_MARGIN
+        snapToInterval={IMAGE_WIDTH + IMAGE_MARGIN}
         snapToAlignment="start"
         contentInset={{
           top: 0,
@@ -69,35 +64,27 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
       <Text style={styles.nameText}>{hotelData.item.name}</Text>
       <View style={styles.ratingContainer}>
         <View style={styles.starContainer}>
-          {new Array(5).fill(0).map((_, i) => {
-            //TODO PULL OUT IN TO CONSTANT FOR CLARITY
-            return hotelData.item.stars > i ? (
-              <Icon key={i} name="star" size={18} color={'#FFD700'} />
-            ) : (
-              <Icon key={i} name="star" size={18} color={'#EBEBED'} />
-            )
-          })}
+          {new Array(5).fill(0).map((_, i) =>
+            hasHotelAchievedStar(hotelData.item.stars, i)
+              ? <Icon key={i} name="star" size={18} color={'#FFD700'} />
+              : <Icon key={i} name="star" size={18} color={'#EBEBED'} />,
+          )}
         </View>
         <View style={styles.userRatingContainer}>
           <Text style={styles.userRatingText}>
-            {hotelData.item.userRating * 10}
+            {hotelUserRatingOutOf100(hotelData.item.userRating)}
           </Text>
         </View>
       </View>
       <View style={styles.priceContainer}>
         <Text style={styles.lastMinutePriceText}>
-          {getTotalWithCurrencySymbol(
-            hotelData.item.currency,
-            hotelData.item.price,
-          )}
+          {getTotalWithCurrencySymbol(hotelData.item.currency,hotelData.item.price)}
         </Text>
         <Text style={styles.lastMinutePriceSubtext}>total</Text>
       </View>
     </View>
   )
 }
-
-//TODO PULL OUT COLORS INTO VAR
 
 const styles = StyleSheet.create({
   cardContainer: {
@@ -132,7 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   addressText: {
-    color: '#C7C7CA', // subtitle color
+    color: '#C7C7CA',
     fontSize: 14,
     paddingHorizontal: 16,
     paddingTop: 16,
@@ -145,7 +132,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   ratingContainer: {
-    //TODO RENAME THIS CLASS
     display: 'flex',
     flexDirection: 'row',
     width: '40%',
@@ -156,17 +142,17 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     borderEndWidth: 2,
-    borderColor: '#EBEBED', // grey
+    borderColor: '#EBEBED',
     marginRight: 8,
     paddingRight: 8,
   },
   userRatingContainer: {
-    backgroundColor: '#A0CA3F', // last minute green
+    backgroundColor: '#A0CA3F',
     padding: 4,
     borderRadius: 8,
   },
   userRatingText: {
-    color: '#ffff', // secondary text color
+    color: '#ffff',
     fontWeight: '600',
   },
   priceContainer: {
@@ -178,7 +164,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
   },
   lastMinutePriceText: {
-    color: '#F0527E', // last minute pink
+    color: '#F0527E',
     fontSize: 24,
     fontWeight: '600',
   },

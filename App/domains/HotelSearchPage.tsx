@@ -7,12 +7,14 @@ import SortModal from '../components/SortModal'
 import { HotelDetails } from '../queries/GetHotelListQuery'
 import { applySort, sortAscendingNumber, sortDescendingNumber } from '../utils/sort'
 import FilterScreen from '../components/FilterModal'
-import { Currency } from '../components/HotelCard'
-import { filterMethods, Filters, MAX_VALUE, MIN_VALUE } from '../types/FilterTypes'
+import { FilterFnState, filterMethods, Filters, MAX_VALUE, MIN_VALUE } from '../types/FilterTypes'
 import { SortMethods, SortSelectionLabels, SortSelections } from '../types/SortTypes'
-import { filterByBudget, filterByStars, initialState, reducer } from '../utils/filter'
+import { reducer } from '../utils/filter'
+import { Currency } from '../utils/currency'
 
 export type HotelDetailKeys = keyof HotelDetails
+
+const initialFilterState: FilterFnState = { 'BUDGET' : [ MIN_VALUE, MAX_VALUE ], 'STARS': 4 }
 
 const HotelSearchPage = () => {
   const getHotels = async () => {
@@ -48,7 +50,7 @@ const HotelSearchPage = () => {
    * Filter Reducer hook
    * Complex filter object state better managed by reducer pattern
    */
-  const [ state, dispatch ] = useReducer(reducer, initialState)
+  const [ state, dispatch ] = useReducer(reducer, initialFilterState)
 
   const setTypeAndCloseModals = (type:SortSelections) => {
     setActiveSortSelection(type)

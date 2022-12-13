@@ -1,4 +1,5 @@
-import { filterByBudget, filterByStars } from "../utils/filter"
+import { filterByBudget, filterByStars} from "../utils/filter"
+
 
 export type BudgetRangeState = number[];
 

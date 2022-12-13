@@ -12,9 +12,9 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
     style={
       {
         "alignItems": "center",
-        "backgroundColor": "#ffff",
+        "backgroundColor": "#FFFF",
         "flexDirection": "row",
-        "height": 50,
+        "height": 100.05,
         "justifyContent": "space-between",
       }
     }
@@ -57,11 +57,11 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             {
               "backgroundColor": "#F0527E",
               "borderRadius": 50,
-              "height": 8,
+              "height": "10%",
               "position": "absolute",
               "right": 12,
               "top": -4,
-              "width": 8,
+              "width": "10%",
             }
           }
         />
@@ -72,7 +72,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -89,7 +89,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -144,7 +145,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -161,7 +162,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -209,7 +211,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -226,7 +228,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -363,13 +366,13 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <View
           style={
             {
-              "backgroundColor": "#fff",
+              "backgroundColor": "#FFFF",
               "borderRadius": 8,
               "elevation": 4,
-              "height": 533.6,
-              "margin": 10,
+              "height": 600.3000000000001,
+              "margin": 30,
               "position": "relative",
-              "shadowColor": "#000",
+              "shadowColor": "#0000",
               "shadowOffset": {
                 "height": 2,
                 "width": 0,
@@ -397,8 +400,9 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             snapToInterval={456}
             style={
               {
+                "borderRadius": 8,
                 "flexGrow": 0,
-                "height": 266.8,
+                "height": 300.15000000000003,
               }
             }
           >
@@ -429,10 +433,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "color": "#C7C7CA",
-                "fontSize": 14,
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
-                "paddingTop": 16,
+                "fontSize": 26.68,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
+                "paddingTop": 26.68,
               }
             }
           >
@@ -441,10 +445,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
           <Text
             style={
               {
-                "fontSize": 18,
+                "fontSize": 33.35,
                 "fontWeight": "600",
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
               }
             }
           >
@@ -456,7 +460,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "flexDirection": "row",
-                "paddingHorizontal": 16,
+                "paddingHorizontal": 30,
                 "width": "40%",
               }
             }
@@ -468,8 +472,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   "borderEndWidth": 2,
                   "display": "flex",
                   "flexDirection": "row",
-                  "marginRight": 8,
-                  "paddingRight": 8,
+                  "marginRight": 15,
+                  "paddingRight": 15,
                 }
               }
             >
@@ -480,7 +484,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -502,7 +506,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -524,7 +528,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -546,7 +550,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -568,7 +572,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#EBEBED",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -586,17 +590,24 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             <View
               style={
                 {
+                  "alignItems": "center",
                   "backgroundColor": "#A0CA3F",
                   "borderRadius": 8,
-                  "padding": 4,
+                  "display": "flex",
+                  "height": 60,
+                  "justifyContent": "center",
+                  "padding": 15,
+                  "width": 60,
                 }
               }
             >
               <Text
                 style={
                   {
-                    "color": "#ffff",
+                    "color": "#FFFF",
+                    "fontSize": 24.011999999999997,
                     "fontWeight": "600",
+                    "textAlign": "center",
                   }
                 }
               >
@@ -608,11 +619,11 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "alignItems": "baseline",
-                "bottom": 12,
+                "bottom": 26.68,
                 "display": "flex",
                 "flexDirection": "row",
                 "position": "absolute",
-                "right": 16,
+                "right": 30,
               }
             }
           >
@@ -620,7 +631,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 24,
+                  "fontSize": 40.019999999999996,
                   "fontWeight": "600",
                 }
               }
@@ -632,7 +643,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 12,
+                  "fontSize": 26.68,
                 }
               }
             >
@@ -648,13 +659,13 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <View
           style={
             {
-              "backgroundColor": "#fff",
+              "backgroundColor": "#FFFF",
               "borderRadius": 8,
               "elevation": 4,
-              "height": 533.6,
-              "margin": 10,
+              "height": 600.3000000000001,
+              "margin": 30,
               "position": "relative",
-              "shadowColor": "#000",
+              "shadowColor": "#0000",
               "shadowOffset": {
                 "height": 2,
                 "width": 0,
@@ -682,8 +693,9 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             snapToInterval={456}
             style={
               {
+                "borderRadius": 8,
                 "flexGrow": 0,
-                "height": 266.8,
+                "height": 300.15000000000003,
               }
             }
           >
@@ -702,8 +714,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -722,8 +734,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -742,8 +754,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -762,8 +774,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -782,8 +794,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -802,8 +814,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -822,8 +834,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -834,10 +846,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "color": "#C7C7CA",
-                "fontSize": 14,
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
-                "paddingTop": 16,
+                "fontSize": 26.68,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
+                "paddingTop": 26.68,
               }
             }
           >
@@ -846,10 +858,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
           <Text
             style={
               {
-                "fontSize": 18,
+                "fontSize": 33.35,
                 "fontWeight": "600",
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
               }
             }
           >
@@ -861,7 +873,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "flexDirection": "row",
-                "paddingHorizontal": 16,
+                "paddingHorizontal": 30,
                 "width": "40%",
               }
             }
@@ -873,8 +885,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   "borderEndWidth": 2,
                   "display": "flex",
                   "flexDirection": "row",
-                  "marginRight": 8,
-                  "paddingRight": 8,
+                  "marginRight": 15,
+                  "paddingRight": 15,
                 }
               }
             >
@@ -885,7 +897,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -907,7 +919,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -929,7 +941,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -951,7 +963,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -973,7 +985,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -992,17 +1004,24 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             <View
               style={
                 {
+                  "alignItems": "center",
                   "backgroundColor": "#A0CA3F",
                   "borderRadius": 8,
-                  "padding": 4,
+                  "display": "flex",
+                  "height": 60,
+                  "justifyContent": "center",
+                  "padding": 15,
+                  "width": 60,
                 }
               }
             >
               <Text
                 style={
                   {
-                    "color": "#ffff",
+                    "color": "#FFFF",
+                    "fontSize": 24.011999999999997,
                     "fontWeight": "600",
+                    "textAlign": "center",
                   }
                 }
               >
@@ -1014,11 +1033,11 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "alignItems": "baseline",
-                "bottom": 12,
+                "bottom": 26.68,
                 "display": "flex",
                 "flexDirection": "row",
                 "position": "absolute",
-                "right": 16,
+                "right": 30,
               }
             }
           >
@@ -1026,7 +1045,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 24,
+                  "fontSize": 40.019999999999996,
                   "fontWeight": "600",
                 }
               }
@@ -1038,7 +1057,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 12,
+                  "fontSize": 26.68,
                 }
               }
             >
@@ -1054,13 +1073,13 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
         <View
           style={
             {
-              "backgroundColor": "#fff",
+              "backgroundColor": "#FFFF",
               "borderRadius": 8,
               "elevation": 4,
-              "height": 533.6,
-              "margin": 10,
+              "height": 600.3000000000001,
+              "margin": 30,
               "position": "relative",
-              "shadowColor": "#000",
+              "shadowColor": "#0000",
               "shadowOffset": {
                 "height": 2,
                 "width": 0,
@@ -1088,8 +1107,9 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             snapToInterval={456}
             style={
               {
+                "borderRadius": 8,
                 "flexGrow": 0,
-                "height": 266.8,
+                "height": 300.15000000000003,
               }
             }
           >
@@ -1108,8 +1128,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1128,8 +1148,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1148,8 +1168,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1168,8 +1188,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1188,8 +1208,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1208,8 +1228,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1228,8 +1248,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1240,10 +1260,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "color": "#C7C7CA",
-                "fontSize": 14,
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
-                "paddingTop": 16,
+                "fontSize": 26.68,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
+                "paddingTop": 26.68,
               }
             }
           >
@@ -1252,10 +1272,10 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
           <Text
             style={
               {
-                "fontSize": 18,
+                "fontSize": 33.35,
                 "fontWeight": "600",
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
               }
             }
           >
@@ -1267,7 +1287,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "flexDirection": "row",
-                "paddingHorizontal": 16,
+                "paddingHorizontal": 30,
                 "width": "40%",
               }
             }
@@ -1279,8 +1299,8 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   "borderEndWidth": 2,
                   "display": "flex",
                   "flexDirection": "row",
-                  "marginRight": 8,
-                  "paddingRight": 8,
+                  "marginRight": 15,
+                  "paddingRight": 15,
                 }
               }
             >
@@ -1291,7 +1311,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -1313,7 +1333,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -1335,7 +1355,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -1357,7 +1377,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -1379,7 +1399,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -1398,17 +1418,24 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             <View
               style={
                 {
+                  "alignItems": "center",
                   "backgroundColor": "#A0CA3F",
                   "borderRadius": 8,
-                  "padding": 4,
+                  "display": "flex",
+                  "height": 60,
+                  "justifyContent": "center",
+                  "padding": 15,
+                  "width": 60,
                 }
               }
             >
               <Text
                 style={
                   {
-                    "color": "#ffff",
+                    "color": "#FFFF",
+                    "fontSize": 24.011999999999997,
                     "fontWeight": "600",
+                    "textAlign": "center",
                   }
                 }
               >
@@ -1420,11 +1447,11 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
             style={
               {
                 "alignItems": "baseline",
-                "bottom": 12,
+                "bottom": 26.68,
                 "display": "flex",
                 "flexDirection": "row",
                 "position": "absolute",
-                "right": 16,
+                "right": 30,
               }
             }
           >
@@ -1432,7 +1459,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 24,
+                  "fontSize": 40.019999999999996,
                   "fontWeight": "600",
                 }
               }
@@ -1444,7 +1471,7 @@ exports[`<SortModal /> should sort the data by price ASCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 12,
+                  "fontSize": 26.68,
                 }
               }
             >
@@ -1477,9 +1504,9 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
     style={
       {
         "alignItems": "center",
-        "backgroundColor": "#ffff",
+        "backgroundColor": "#FFFF",
         "flexDirection": "row",
-        "height": 50,
+        "height": 100.05,
         "justifyContent": "space-between",
       }
     }
@@ -1522,11 +1549,11 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             {
               "backgroundColor": "#F0527E",
               "borderRadius": 50,
-              "height": 8,
+              "height": "10%",
               "position": "absolute",
               "right": 12,
               "top": -4,
-              "width": 8,
+              "width": "10%",
             }
           }
         />
@@ -1537,7 +1564,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -1554,7 +1581,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -1609,7 +1637,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -1626,7 +1654,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -1674,7 +1703,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             [
               {
                 "color": undefined,
-                "fontSize": 24,
+                "fontSize": 33.35,
               },
               undefined,
               {
@@ -1691,7 +1720,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
         <Text
           style={
             {
-              "marginLeft": 10,
+              "fontSize": 26.68,
+              "marginLeft": 30,
             }
           }
         >
@@ -1793,13 +1823,13 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
         <View
           style={
             {
-              "backgroundColor": "#fff",
+              "backgroundColor": "#FFFF",
               "borderRadius": 8,
               "elevation": 4,
-              "height": 533.6,
-              "margin": 10,
+              "height": 600.3000000000001,
+              "margin": 30,
               "position": "relative",
-              "shadowColor": "#000",
+              "shadowColor": "#0000",
               "shadowOffset": {
                 "height": 2,
                 "width": 0,
@@ -1827,8 +1857,9 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             snapToInterval={456}
             style={
               {
+                "borderRadius": 8,
                 "flexGrow": 0,
-                "height": 266.8,
+                "height": 300.15000000000003,
               }
             }
           >
@@ -1847,8 +1878,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1867,8 +1898,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1887,8 +1918,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1907,8 +1938,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1927,8 +1958,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1947,8 +1978,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1967,8 +1998,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 style={
                   {
                     "borderRadius": 8,
-                    "height": 266.8,
-                    "marginRight": 6,
+                    "height": 300.15000000000003,
+                    "marginRight": 15,
                     "width": 450,
                   }
                 }
@@ -1979,10 +2010,10 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             style={
               {
                 "color": "#C7C7CA",
-                "fontSize": 14,
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
-                "paddingTop": 16,
+                "fontSize": 26.68,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
+                "paddingTop": 26.68,
               }
             }
           >
@@ -1991,10 +2022,10 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
           <Text
             style={
               {
-                "fontSize": 18,
+                "fontSize": 33.35,
                 "fontWeight": "600",
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
               }
             }
           >
@@ -2006,7 +2037,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "flexDirection": "row",
-                "paddingHorizontal": 16,
+                "paddingHorizontal": 30,
                 "width": "40%",
               }
             }
@@ -2018,8 +2049,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   "borderEndWidth": 2,
                   "display": "flex",
                   "flexDirection": "row",
-                  "marginRight": 8,
-                  "paddingRight": 8,
+                  "marginRight": 15,
+                  "paddingRight": 15,
                 }
               }
             >
@@ -2030,7 +2061,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2052,7 +2083,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2074,7 +2105,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2096,7 +2127,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2118,7 +2149,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2137,17 +2168,24 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             <View
               style={
                 {
+                  "alignItems": "center",
                   "backgroundColor": "#A0CA3F",
                   "borderRadius": 8,
-                  "padding": 4,
+                  "display": "flex",
+                  "height": 60,
+                  "justifyContent": "center",
+                  "padding": 15,
+                  "width": 60,
                 }
               }
             >
               <Text
                 style={
                   {
-                    "color": "#ffff",
+                    "color": "#FFFF",
+                    "fontSize": 24.011999999999997,
                     "fontWeight": "600",
+                    "textAlign": "center",
                   }
                 }
               >
@@ -2159,11 +2197,11 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             style={
               {
                 "alignItems": "baseline",
-                "bottom": 12,
+                "bottom": 26.68,
                 "display": "flex",
                 "flexDirection": "row",
                 "position": "absolute",
-                "right": 16,
+                "right": 30,
               }
             }
           >
@@ -2171,10 +2209,11 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 24,
+                  "fontSize": 40.019999999999996,
                   "fontWeight": "600",
                 }
               }
+              testID="price-test"
             >
               €200 
             </Text>
@@ -2182,7 +2221,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 12,
+                  "fontSize": 26.68,
                 }
               }
             >
@@ -2198,13 +2237,13 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
         <View
           style={
             {
-              "backgroundColor": "#fff",
+              "backgroundColor": "#FFFF",
               "borderRadius": 8,
               "elevation": 4,
-              "height": 533.6,
-              "margin": 10,
+              "height": 600.3000000000001,
+              "margin": 30,
               "position": "relative",
-              "shadowColor": "#000",
+              "shadowColor": "#0000",
               "shadowOffset": {
                 "height": 2,
                 "width": 0,
@@ -2232,8 +2271,9 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             snapToInterval={456}
             style={
               {
+                "borderRadius": 8,
                 "flexGrow": 0,
-                "height": 266.8,
+                "height": 300.15000000000003,
               }
             }
           >
@@ -2264,10 +2304,10 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             style={
               {
                 "color": "#C7C7CA",
-                "fontSize": 14,
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
-                "paddingTop": 16,
+                "fontSize": 26.68,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
+                "paddingTop": 26.68,
               }
             }
           >
@@ -2276,10 +2316,10 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
           <Text
             style={
               {
-                "fontSize": 18,
+                "fontSize": 33.35,
                 "fontWeight": "600",
-                "paddingBottom": 8,
-                "paddingHorizontal": 16,
+                "paddingBottom": 15,
+                "paddingHorizontal": 30,
               }
             }
           >
@@ -2291,7 +2331,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                 "alignItems": "center",
                 "display": "flex",
                 "flexDirection": "row",
-                "paddingHorizontal": 16,
+                "paddingHorizontal": 30,
                 "width": "40%",
               }
             }
@@ -2303,8 +2343,8 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   "borderEndWidth": 2,
                   "display": "flex",
                   "flexDirection": "row",
-                  "marginRight": 8,
-                  "paddingRight": 8,
+                  "marginRight": 15,
+                  "paddingRight": 15,
                 }
               }
             >
@@ -2315,7 +2355,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2337,7 +2377,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2359,7 +2399,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2381,7 +2421,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#FFD700",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2403,7 +2443,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
                   [
                     {
                       "color": "#EBEBED",
-                      "fontSize": 18,
+                      "fontSize": 33.35,
                     },
                     undefined,
                     {
@@ -2421,17 +2461,24 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             <View
               style={
                 {
+                  "alignItems": "center",
                   "backgroundColor": "#A0CA3F",
                   "borderRadius": 8,
-                  "padding": 4,
+                  "display": "flex",
+                  "height": 60,
+                  "justifyContent": "center",
+                  "padding": 15,
+                  "width": 60,
                 }
               }
             >
               <Text
                 style={
                   {
-                    "color": "#ffff",
+                    "color": "#FFFF",
+                    "fontSize": 24.011999999999997,
                     "fontWeight": "600",
+                    "textAlign": "center",
                   }
                 }
               >
@@ -2443,11 +2490,11 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
             style={
               {
                 "alignItems": "baseline",
-                "bottom": 12,
+                "bottom": 26.68,
                 "display": "flex",
                 "flexDirection": "row",
                 "position": "absolute",
-                "right": 16,
+                "right": 30,
               }
             }
           >
@@ -2455,10 +2502,11 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 24,
+                  "fontSize": 40.019999999999996,
                   "fontWeight": "600",
                 }
               }
+              testID="price-test"
             >
               €120 
             </Text>
@@ -2466,7 +2514,7 @@ exports[`<SortModal /> should sort the data by stars DESCENDING 1`] = `
               style={
                 {
                   "color": "#F0527E",
-                  "fontSize": 12,
+                  "fontSize": 26.68,
                 }
               }
             >

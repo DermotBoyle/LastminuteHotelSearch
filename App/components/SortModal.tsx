@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { SortMethods, SortSelections } from '../types/SortTypes'
-import { fontSizes, height, width } from '../utils/fontSizes'
+import { height, theme, width } from '../variables'
 
 type SortModalProps = {
   isOpen: boolean,
@@ -55,13 +55,12 @@ const SortModal: React.FC<SortModalProps> = props => {
             <Pressable
               style={styles.modalCloseIcon}
               onPress={() => props.setShowSortModal(false)}>
-              <Icon style={styles.modalCloseIcon} size={fontSizes.medium} name="close" />
+              <Icon style={styles.modalCloseIcon} size={theme.fontSize.standardText} name="close" />
             </Pressable>
             <Text style={styles.modalTitle}>{props.title}</Text>
           </View>
           <View style={styles.modalListBody}>
             <FlatList
-              style={styles.sortList}
               data={props.sortingDetails}
               renderItem={SortListItem}
               keyExtractor={sort => sort.label}
@@ -76,12 +75,12 @@ const SortModal: React.FC<SortModalProps> = props => {
 const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
-    backgroundColor: '#000000AA',
+    backgroundColor: theme.colors.modalOpacityBackground,
     justifyContent: 'flex-end',
   },
   modalBody: {
     flex: 0.45,
-    backgroundColor: '#EBEBED',
+    backgroundColor: theme.colors.background,
     borderTopRightRadius: 8,
     borderTopLeftRadius: 8,
   },
@@ -92,7 +91,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     height: '20%',
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
+    backgroundColor: theme.colors.secondary,
     alignItems: 'center',
   },
   modalCloseIcon: {
@@ -104,21 +103,21 @@ const styles = StyleSheet.create({
   modalTitle: {
     width: '100%',
     textAlign: 'center',
-    fontSize: fontSizes.medium,
+    fontSize: theme.fontSize.standardText,
     fontWeight: '600',
   },
   modalListBody: {
     flex: 1,
-    padding: 16,
+    padding: theme.spacing.h4,
   },
   modalListItem: {
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
+    backgroundColor: theme.colors.secondary,
     justifyContent: 'space-between',
     height: MODAL_HEIGHT * 0.07,
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: theme.spacing.h4,
     marginBottom: 1,
   },
   modalListItemTopBorderRadius: {
@@ -126,13 +125,13 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 8,
   },
   modalListItemIcon: {
-    color: '#F0527E',
+    color: theme.colors.primary,
     fontWeight: '600',
-    fontSize: fontSizes.medium,
+    fontSize: theme.fontSize.standardText,
   },
   modalListItemLabel: {
     fontWeight: '600',
-    fontSize: fontSizes.small,
+    fontSize: theme.fontSize.subtitle,
   },
 })
 

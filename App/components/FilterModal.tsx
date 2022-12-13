@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import PrimaryButton from './PrimaryButton'
 import { FilterFnState, Filters, MAX_VALUE, MIN_VALUE, ReducerActions } from '../types/FilterTypes'
 import { Currency, CurrencySymbolLabels } from '../utils/currency'
-import { fontSizes, height, width } from '../utils/fontSizes'
+import { height, theme, width } from '../variables'
 
 type FilterScreenProps = {
   currency?: Currency,
@@ -39,7 +39,7 @@ const FilterScreen: React.FC <FilterScreenProps> = (props) => {
     <View style={styles.screenContainer}>
       <View style={styles.screenHeader}>
         <Pressable style={styles.closeIconContainer}>
-          <Icon name="close" size={fontSizes.large} onPress={() => props.setShowFilterScreen(false)} />
+          <Icon name="close" size={theme.fontSize.standardText} onPress={() => props.setShowFilterScreen(false)} />
         </Pressable>
         <Text style={styles.titleText}>Filters</Text>
         <Pressable style={styles.resetAllContainer} onPress={() => props.resetFiltersAndApplyPossibleSort()}>
@@ -52,7 +52,7 @@ const FilterScreen: React.FC <FilterScreenProps> = (props) => {
           <View testID='slider-container' style={styles.sliderContainer}>
             <Text style={styles.sliderAmountText}>{getSliderAmount(props.state[Filters.BUDGET])}</Text>
             <MultiSlider
-              markerStyle={{ height: fontSizes.small, width: fontSizes.small }}
+              markerStyle={{ height: theme.fontSize.subtitle, width: theme.fontSize.subtitle }}
               values={[ MIN_VALUE, MAX_VALUE ]}
               min={MIN_VALUE}
               max={MAX_VALUE}
@@ -79,35 +79,34 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: "#ffff",
+    backgroundColor: theme.colors.secondary,
     alignItems: 'center',
     height: height * 0.085,
-    paddingHorizontal: 16,
+    paddingHorizontal: theme.spacing.h4,
   },
   titleText: {
-    fontSize: fontSizes.medium,
+    fontSize: theme.fontSize.standardText,
     fontWeight: '600',
     textAlign: 'center',
     width: '40%',
   },
   resetAllContainer: {
     width: '30%',
-    paddingEnd: "2%",
   },
   resetText: {
-    color: "#F0527E",
+    color: theme.colors.primary,
     textAlign: 'right',
-    fontSize: fontSizes.small,
+    fontSize: theme.fontSize.subtitle,
   },
   closeIconContainer: {
     width: '30%',
   },
   filterBodyContainer: {
     flex: 1,
-    paddingHorizontal: 16,
+    paddingHorizontal: theme.spacing.h4,
   },
   budgetLabel: {
-    fontSize: fontSizes.medium,
+    fontSize: theme.fontSize.standardText,
     fontWeight: '600',
     marginBottom: height * 0.015,
   },
@@ -120,27 +119,27 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 8,
+    padding: theme.spacing.h2,
     borderRadius: 12,
-    backgroundColor: "#ffff",
-    paddingVertical: 24,
+    backgroundColor: theme.colors.secondary,
+    paddingVertical: theme.spacing.v4,
   },
   sliderAmountText: {
     width: "100%",
     textAlign: 'left',
-    fontSize: fontSizes.small,
-    paddingHorizontal: 16,
+    fontSize: theme.fontSize.subtitle,
+    paddingHorizontal: theme.spacing.h4,
     marginTop: -8,
-    marginBottom: 8,
+    marginBottom: theme.spacing.v2,
   },
   screenFooter: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    height: height * 0.125,
-    paddingHorizontal: 24,
-    backgroundColor: '#ffff',
+    height: height * 0.095,
+    paddingHorizontal: theme.spacing.h4,
+    backgroundColor: theme.colors.secondary,
   },
 })
 

@@ -11,14 +11,14 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { HotelDetails } from '../queries/GetHotelListQuery'
 import { getTotalWithCurrencySymbol } from '../utils/currency'
-import { fontSizes } from '../utils/fontSizes'
+import { theme } from '../variables'
 
 const { height, width } = Dimensions.get('window')
 
 const IMAGE_WIDTH = width * 0.6
 const IMAGE_HEIGHT = height * 0.225
 const FULL_WIDTH_IMAGE = width * 0.95
-const CARD_HEIGHT = height * 0.48
+const CARD_HEIGHT = height * 0.45
 const IMAGE_MARGIN = 6
 
 const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
@@ -28,7 +28,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
 
   return (
     <View style={styles.cardContainer}>
-      {/** Virtual scroller (FlatList) would be better here not to load all images at once */}
+      {/** Virtual scroller (FlatList) would be better here so not to load all images at once */}
       <ScrollView
         style={styles.imageScroller}
         horizontal
@@ -51,6 +51,7 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
                 key={imgUri}
                 source={{ uri: imgUri }}
                 style={styles.cardImage}
+                //Issue with Android in debug build processing the backup image
                 defaultSource={require('../assets/photos/lastminute_default_photo.jpeg')}
               />
             )
@@ -69,8 +70,8 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
         <View style={styles.starContainer}>
           {new Array(5).fill(0).map((_, i) =>
             hasHotelAchievedStar(hotelData.item.stars, i)
-              ? <Icon testID='achieved-star' key={i} name="star" size={fontSizes.medium} color={'#FFD700'} />
-              : <Icon key={i} name="star" size={fontSizes.medium} color={'#EBEBED'} />,
+              ? <Icon testID='achieved-star' key={i} name="star" size={theme.fontSize.standardText} color={theme.colors.gold} />
+              : <Icon key={i} name="star" size={theme.fontSize.standardText} color={theme.colors.background} />,
           )}
         </View>
         <View style={styles.userRatingContainer}>
@@ -92,11 +93,11 @@ const HotelCard: ListRenderItem<HotelDetails> = hotelData => {
 const styles = StyleSheet.create({
   cardContainer: {
     position: 'relative',
-    backgroundColor: '#fff',
-    margin: 10,
+    backgroundColor: theme.colors.secondary,
+    margin: theme.spacing.h4,
     borderRadius: 8,
     height: CARD_HEIGHT,
-    shadowColor: '#000',
+    shadowColor: theme.colors.darkText,
     shadowOffset: {
       width: 0,
       height: 2,
@@ -108,12 +109,13 @@ const styles = StyleSheet.create({
   imageScroller: {
     height: IMAGE_HEIGHT,
     flexGrow: 0,
+    borderRadius: 8,
   },
   cardImage: {
     height: IMAGE_HEIGHT,
     width: IMAGE_WIDTH,
     borderRadius: 8,
-    marginRight: 6,
+    marginRight: theme.spacing.h2,
   },
   cardImageFullWidth: {
     flex: 1,
@@ -122,16 +124,16 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   addressText: {
-    color: '#C7C7CA',
-    fontSize: fontSizes.small,
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 8,
+    color: theme.colors.tertiaryText,
+    fontSize: theme.fontSize.subtitle,
+    paddingHorizontal: theme.spacing.h4,
+    paddingTop: theme.spacing.v2,
+    paddingBottom: theme.spacing.h2,
   },
   nameText: {
-    fontSize: fontSizes.medium,
-    paddingHorizontal: 16,
-    paddingBottom: 8,
+    fontSize: theme.fontSize.standardText,
+    paddingHorizontal: theme.spacing.h4,
+    paddingBottom: theme.spacing.h2,
     fontWeight: '600',
   },
   ratingContainer: {
@@ -139,45 +141,48 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '40%',
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: theme.spacing.h4,
   },
   starContainer: {
     display: 'flex',
     flexDirection: 'row',
     borderEndWidth: 2,
-    borderColor: '#EBEBED',
-    marginRight: 8,
-    paddingRight: 8,
+    borderColor: theme.colors.background,
+    marginRight: theme.spacing.h2,
+    paddingRight: theme.spacing.h2,
   },
   userRatingContainer: {
-    backgroundColor: '#A0CA3F',
-    padding: 2,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: theme.colors.success,
+    padding: theme.spacing.h2,
     borderRadius: 8,
-    height: width * 0.06,
-    width: width * 0.06,
+    height: width * 0.08,
+    width: width * 0.08,
   },
   userRatingText: {
-    color: '#ffff',
+    color: theme.colors.secondary,
     fontWeight: '600',
-    fontSize: fontSizes.small,
+    fontSize: theme.fontSize.detail,
     textAlign: 'center',
   },
   priceContainer: {
     position: 'absolute',
-    right: 16,
-    bottom: 12,
+    right: theme.spacing.h4,
+    bottom: theme.spacing.v2,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'baseline',
   },
   lastMinutePriceText: {
-    color: '#F0527E',
-    fontSize: fontSizes.large,
+    color: theme.colors.primary,
+    fontSize: theme.fontSize.title,
     fontWeight: '600',
   },
   lastMinutePriceSubtext: {
-    color: '#F0527E',
-    fontSize: fontSizes.small,
+    color: theme.colors.primary,
+    fontSize: theme.fontSize.subtitle,
   },
 })
 

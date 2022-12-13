@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
-import { fontSizes } from '../utils/fontSizes'
+import { theme } from '../variables'
 
 type PrimaryButtonProps = {
   title: string,
@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '30%',
-    backgroundColor: "#F0527E",
+    width: '50%',
+    backgroundColor: theme.colors.primary,
     height: "50%",
     borderRadius: 8,
   },
   buttonText: {
-    color: '#ffff',
-    fontSize: fontSizes.medium,
+    color: theme.colors.secondary,
+    fontSize: theme.fontSize.subtitle,
     fontWeight: '600',
   },
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import { HotelDetails } from '../queries/GetHotelListQuery'
-import { fontSizes } from '../utils/fontSizes'
+import { theme } from '../variables'
 import HotelCard from './HotelCard'
 
 type HotelListProps = {
@@ -29,7 +29,7 @@ const HotelList: React.FC<HotelListProps> = props => {
 const styles = StyleSheet.create({
   noResultsContainer: {
     height: "35%",
-    backgroundColor: "#ffff",
+    backgroundColor: theme.colors.background,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   noResultsFoundText: {
-    fontSize: fontSizes.large,
+    fontSize: theme.fontSize.title,
     fontWeight: '600',
     paddingBottom: 12,
   },
   removeFiltersText: {
     textAlign: "center",
-    fontSize: fontSizes.small,
+    fontSize: theme.fontSize.standardText,
   },
 
 })

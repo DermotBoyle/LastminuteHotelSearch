@@ -4,6 +4,8 @@
 
 The app has been created from the React Native CLI template.
 
+The application code is contained in the `App` folder.
+
 Its UX/UI is taken from the existing `lastminute.com` mobile app while implementing the basic sort and filter features.
 Care was taken to create a basic design system that is in included in the `variables.ts` file. The application
 has been tested on android and iOS mobile phone devices. The focus of the exercise was mostly in the programming of the
